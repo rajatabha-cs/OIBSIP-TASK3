@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,100&family=Merriweather:wght@300&family=My+Soul&family=Open+Sans:wght@700&family=Poppins:ital,wght@1,300&family=Roboto:wght@500&family=Varela+Round&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'My Soul', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+body{
+    height:100vh;
+    background: #03dfff;
+    background: linear-gradient(139deg,#2e1ee1a1 0%,#c128df7a 90%);
+}
+.container{
+    position:relative;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.addTask{
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+.addTask > input[type="text"]{
+    width:90%;
+    color:#333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding:10px;
+    font-size:22px;
+    outline: none;
+    letter-spacing: 6px;
+}
+.addTask button{
+    margin:0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 42px;
+    cursor: pointer;
+    width:100px;
+}
+.notcompleted, .completed{
+    margin:5px 0;
+    padding: 20px;
+}
+h3{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align:center;
+    color:#fff;
+    letter-spacing: 6px;
+}
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li{
+    width:100%;
+    padding: 18px;
+    margin:5px 0;
+    background: red;
+    font-size: 25px;
+    border-radius: 50px;
+    counter-increment: my-counter;
+    color:#fff;
+}
+ol.completed li{
+    background: green;
+}
+ol li::before{
+    content: counter(my-counter);
+    background: #231381;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color:#fff;
+    margin-right: 0.7rem;
+}
+li button{
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
